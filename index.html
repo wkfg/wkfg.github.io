@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ngrok - 内网穿透服务</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="内网穿透服务">
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wordmark a:hover {
+            text-decoration: none;
+        }
+
+        .container-fluid {
+            max-width: 757px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        #footer li a {
+            color: inherit;
+            font-size: 12px;
+        }
+
+        pre code, code {
+            border: 0;
+        }
+
+        code.well {
+            display: block;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/bootstrap-responsive.min.css"/>
+
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        /* Custom container */
+        .container-fluid {
+            margin: 0 auto;
+            max-width: 700px;
+            padding: 0;
+        }
+
+        .container-fluid > hr {
+            margin: 30px 0;
+        }
+
+        .masthead h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer {
+            color: #aaa;
+        }
+
+        strong {
+            color: #000;
+        }
+
+        .quotes blockquote {
+            height: 78px;
+        }
+
+        h2 {
+            color: #dd4814;
+        }
+
+        h2.first {
+            margin-top: 0;
+        }
+
+        h4 {
+            color: #1c4a3d;
+            color: #1c8a3d;
+            color: #040;
+        }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+            margin: 30px 0 60px;
+            text-align: left;
+        }
+
+        .jumbotron h1 {
+            font-size: 54px;
+            line-height: 1;
+        }
+
+        .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+        }
+
+        /* Supporting marketing content */
+        .marketing {
+            margin: 30px 0;
+        }
+
+        h4 {
+            margin-top: 30px;
+        }
+
+        .feature h4 {
+            margin-top: 10px;
+        }
+
+        .feature p {
+            height: 78px;
+        }
+
+        .marketing .feature {
+            height: 200px;
+        }
+
+        #dl tr:first-child td, #dl tr:first-child th {
+            border-top: 0;
+        }
+
+        #dl .detected {
+            background-color: #fffffa;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div style="margin: 100px 0px" class="jumbotron">
+        <h1 class="text-center">内网穿透</h1>
+        <p style="color:#666; margin: 20px 0; font-size: 20px" class="lead text-center">&#x201D;使公网可以访问处于NAT网络下或多级路由下的服务&#x201D;</p>
+        <div style="margin: 35px 0" class="text-center"><a class="btn btn-large btn-primary" href="#download">下载</a>
+        </div>
+    </div>
+    <img src="static/img/demo.png"/>
+    <img src="static/img/webhooks.png"/>
+    <hr/>
+    <a name="download"></a>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <h2 id="download">下载与安装</h2>
+            <p>ngrok 易于安装，常用平台都有二进制包，下载即可运行。</p>
+            <h4>下载 ngrok</h4>
+            <table id="dl" class="table">
+                <tr id="dl-linux-arm">
+                    <th>Linux ARM</th>
+                    <td>
+                        <span class="pull-right">
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                            <i class="icon-white icon-download"></i>ARM</a>
+                        </span>
+                    </td>
+                </tr>
+                <tr id="dl-linux-amd64">
+                    <th>Linux</th>
+                    <td>
+                        <span class="pull-right">
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>64位
+                            </a>
+                            &nbsp;
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>32位
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+                <tr id="dl-windows-amd64">
+                    <th>Windows</th>
+                    <td>
+                        <span class="pull-right">
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>64位
+                            </a>
+                            &nbsp;
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>32位
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+                <tr id="dl-darwin-amd64">
+                    <th>Mac OS X</th>
+                    <td>
+                        <span class="pull-right">
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>64位
+                            </a>
+                            &nbsp;
+                            <a href="https://pan.baidu.com/s/1gfQnY07" target="_blank"
+                               class="btn btn-inverse">
+                                <i class="icon-white icon-download"></i>32位
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            <h4>配置</h4>
+            <p>创建配置文件 ngrok.cfg</p>
+            <code class="well">
+                server_addr: ngrok.wkfg.org:4443<br/>
+                trust_host_root_certs: false
+            </code>
+            <h4>运行</h4>
+            <p>命令行启动，成功后即可通过 http://demo.wkfg.ngrok.org 来访问本机 8080 端口的服务</p>
+            <code class="well">
+                ngrok.exe -subdomain=demo -config=ngrok.cfg -log=ngrok.log 8080
+            </code>
+			<h4>抓包</h4>
+			<p>访问 127.0.0.1:4040 即可看到请求的详细信息</p>
+        </div>
+    </div>
+</html>
